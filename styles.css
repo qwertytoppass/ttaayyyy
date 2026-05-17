@@ -1,0 +1,62 @@
+:root{
+  --bg:#f5f7fb;
+  --accent:#4f46e5;
+  --muted:#6b7280;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;margin:0;background:var(--bg);color:#0f172a;scrollbar-gutter:stable;background-attachment:fixed;background-size:cover;background-position:center}
+.container{max-width:980px;margin:32px auto;padding:0 16px}
+.hero{background:linear-gradient(90deg, rgba(79,70,229,0.08), rgba(99,102,241,0.04));padding:40px 0 24px;position:relative}
+.hero-inner{max-width:980px;margin:0 auto;padding:24px 16px}
+.top-right-controls{position:absolute;right:16px;top:16px;display:flex;gap:8px;align-items:center}
+.top-right-controls .btn{padding:8px 12px;border-radius:8px}
+.top-right-controls .btn, #authBtn, #logoutBtn { background:#000;color:#fff;border:none }
+.top-right-controls .btn:hover, #authBtn:hover, #logoutBtn:hover { background:#111 }
+.hero h1{margin:0 0 8px;font-size:28px}
+.lead{margin:0 0 16px;color:var(--muted)}
+.hero-actions{display:flex;gap:12px}
+.btn{display:inline-block;padding:10px 16px;border-radius:8px;background:#fff;border:1px solid rgba(15,23,42,0.06);cursor:pointer;text-decoration:none;color:inherit}
+.btn.primary{background:var(--accent);color:#fff;border:none}
+.about{background:#fff;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(15,23,42,0.06);margin-top:-12px;min-height:200px}
+.section-controls{display:flex;gap:12px;margin-top:16px}
+.section-controls .btn{margin:0}
+.top-content{margin-top:16px}
+.top-list{display:grid;gap:12px}
+.top-item{background:#f9f9f9;padding:12px;border-radius:10px;border-left:4px solid #ccc;display:flex;align-items:center;justify-content:space-between}
+.top-item.place-1{background:linear-gradient(to right, rgba(255,215,0,0.1), transparent);border-left-color:#FFD700}
+.top-item.place-2{background:linear-gradient(to right, rgba(192,192,192,0.1), transparent);border-left-color:#C0C0C0}
+.top-item.place-3{background:linear-gradient(to right, rgba(205,127,50,0.1), transparent);border-left-color:#CD7F32}
+.top-item-rank{font-weight:bold;font-size:16px;color:#666;min-width:40px;text-align:center}
+.top-item.place-1 .top-item-rank{color:#FFD700}
+.top-item.place-2 .top-item-rank{color:#C0C0C0}
+.top-item.place-3 .top-item-rank{color:#CD7F32}
+.top-item-name{flex:1;font-weight:500;margin-left:12px}
+.top-item-reputation{font-weight:600;color:#4f46e5}
+.controls{display:flex;gap:16px;align-items:center;margin:18px 0}
+.reviews{margin:28px 0}
+.reviews-list{display:grid;gap:12px}
+.review{background:#fff;padding:12px;border-radius:10px;box-shadow:0 4px 10px rgba(2,6,23,0.04)}
+.review .meta{font-size:13px;color:var(--muted);margin-bottom:8px}
+.review-form{background:#fff;padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(15,23,42,0.06);margin-top:12px}
+.review-form h3{margin:0 0 8px}
+.review-textarea{width:100%;min-height:110px;border:1px solid rgba(15,23,42,0.06);border-radius:8px;padding:10px;font-size:14px}
+.review-form .btn{margin-top:10px}
+.stars{display:inline-flex;gap:8px;align-items:center}
+.star{display:inline-block;cursor:pointer;color:#bfb6ae;font-size:34px;line-height:1;transition:color .12s, transform .08s;text-shadow:0 1px 0 rgba(255,255,255,0.15);}
+.star:hover{transform:translateY(-2px)}
+.star.filled{color: #f4c542; text-shadow:0 2px 4px rgba(0,0,0,0.12)}
+.review .stars{margin-top:6px}
+.admin-controls{margin-top:8px;display:flex;gap:8px}
+.admin-btn{padding:6px 8px;border-radius:8px;border:1px solid rgba(15,23,42,0.06);background:#fff;cursor:pointer}
+.admin-btn.delete{background:#fee2e2;border-color:#fecaca}
+.admin-btn.ban{background:#fff7ed;border-color:#fed7aa}
+.controls-row{margin-top:12px}
+.site-footer{margin-top:32px;padding:18px 0;text-align:center;color:var(--muted)}
+.footer-actions{margin:12px 0}
+.muted{color:var(--muted)}
+.review-logged{background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;display:inline-block;font-size:14px}
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(2,6,23,0.5);visibility:hidden;opacity:0;transition:opacity .18s}
+.modal[aria-hidden="false"]{visibility:visible;opacity:1}
+.modal-content{background:#fff;border-radius:12px;padding:18px;max-width:720px;width:90%;max-height:80vh;overflow:auto;position:relative}
+.modal-close{position:absolute;right:12px;top:8px;border:none;background:none;font-size:22px;cursor:pointer}
+@media (min-width:800px){.hero-inner{padding:48px 16px}.hero h1{font-size:40px}}

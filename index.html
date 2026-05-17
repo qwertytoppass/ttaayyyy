@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Мой сайт — Отзывы и информация</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="top-right-controls">
+        <a class="btn" id="authBtn">Войти через Telegram</a>
+      </div>
+    </div>
+    <svg class="hero-wave" viewBox="0 0 1440 120" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.12)" d="M0,32L48,42.7C96,53,192,75,288,90.7C384,107,480,117,576,106.7C672,96,768,64,864,48C960,32,1056,32,1152,42.7C1248,53,1344,75,1392,85.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+  </header>
+
+  <main class="container">
+    <section class="about">
+      <h2 id="aboutTitle">О сайте</h2>
+      <p id="aboutContent">Этот сайт показывает актуальную информацию о проекте и отзывы пользователей. Чтобы оставить отзыв, нужно зарегистрироваться через Telegram-бота (см. инструкции ниже).</p>
+      <div id="topContent" class="top-content" style="display: none;">
+        <div id="topList" class="top-list"></div>
+      </div>
+      <div class="section-controls">
+        <button id="aboutBtn" class="btn primary">О сайте</button>
+        <button id="topBtn" class="btn">Топ</button>
+      </div>
+    </section>
+
+    <!-- Background is managed on the server by placing an image named `bg.jpg` into the website folder -->
+
+    <section id="reviews" class="reviews">
+      <h2>Отзывы</h2>
+      <div id="latestReviews" class="reviews-list"></div>
+      <div id="reviewFormContainer"></div>
+      <div class="controls-row">
+        <a class="btn primary" id="leaveReviewBtn">Оставить отзыв</a>
+        <button id="allReviewsBtn" class="btn">Все отзывы</button>
+      </div>
+
+      <div id="allReviewsModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+          <button class="modal-close" id="closeModal">×</button>
+          <h3>Все отзывы</h3>
+          <div id="allReviewsList" class="reviews-list"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>Чтобы оставить отзыв — зарегистрируйтесь в Telegram-боте. Ссылка на бота: <a id="botLink" href="#">@Questionnairesold1_bot</a></p>
+      
+      <p class="muted">© 2026 Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
